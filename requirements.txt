@@ -1,0 +1,14 @@
+# sound and mic 
+SpeechRecognition==3.10.4
+sounddevice==0.4.7
+numpy==1.26.4
+scipy==1.13.0
+
+# speech-to-text(detection)
+faster-whisper==1.0.2
+
+# text-to-speech(Jarvis voice)
+pyttsx3==2.90
+
+# local llm integration(through Ollama)
+openai==1.30.1
