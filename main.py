@@ -1,4 +1,13 @@
+import os
 import sys
+
+stderr = sys.stderr.fileno()
+try:
+    devnull = os.open(os.devnull, os.O_WRONLY)
+    os.dup2(devnull, stderr)
+except Exception:
+    pass
+
 import config
 # Import everything from ./modules
 from modules import audio, stt, cmd, llm, tts
