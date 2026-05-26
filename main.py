@@ -1,7 +1,7 @@
 import sys
 import config
 # Import everything from ./modules
-from modules import audio, stt, commands, llm, tts
+from modules import audio, stt, cmd, llm, tts
 
 def main():
     # Hello phrase on service start
