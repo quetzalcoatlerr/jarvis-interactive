@@ -9,7 +9,7 @@ def handle_command(text: str) -> bool:
     
     # CAT: Software launching
     if "открой браузер" in query or "open browser" in query:
-        os.system("xdg-open https://google.com &")
+        os.system("xdg-open https://github.com &")
         return True
         
     if "терминал" in query or "terminal" in query:
