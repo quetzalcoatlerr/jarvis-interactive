@@ -4,7 +4,7 @@ import config
 # Connecting to local Ollama server. 
 # Ollama emulates OpenAI API out of the box.
 _client = OpenAI(
-    base_url=config.OLLAMA_URL, 
+    base_url=config.LLM_URL, 
     api_key="ollama"  # API-key can be anyting
 )
 
@@ -13,7 +13,7 @@ def ask_jarvis(prompt: str) -> str:
     try:
         # Create a chat-session
         response = _client.chat.completions.create(
-            model=config.OLLAMA_MODEL,
+            model=config.LLM_MODEL,
             messages=[
                 # Role system defines the model's behavior at root
                 {"role": "system", "content": config.SYSTEM_PROMPT},
