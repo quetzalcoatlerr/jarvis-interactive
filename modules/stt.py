@@ -26,7 +26,11 @@ def transcribe(audio_data) -> str:
 
         # 2. Launching the model's inference
         # beam_size=5: algorithm for finding optimal text.
-        segments, info = _whisper_model.transcribe(config.AUDIO_TEMP_FILE, beam_size=5)
+        segments, info = _whisper_model.transcribe(
+            config.AUDIO_TEMP_FILE,
+            beam_size=5,
+            initial_promt="Джарвис, Jarvis, Docker, терминал"
+        )
         
         # The info automatically contains language data (e.g., 'ru' or 'en')
         # print(f"[Detected language: {info.language} with probability {info.language_probability:.2f}]")
