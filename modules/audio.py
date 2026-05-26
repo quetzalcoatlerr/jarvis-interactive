@@ -13,7 +13,7 @@ def listen_voice():
     with sr.Microphone(sample_rate=config.SAMPLING_RATE) as source:
         print("[Listening to the environment for noise calibration...]")
         # adapting to background noise
-        recognizer.adjust_to_ambient_noise(source, duration=0.5)
+        recognizer.adjust_for_ambient_noise(source, duration=0.5)
 
         print("[Jarvis is here, sir]")
         try:
