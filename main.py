@@ -55,7 +55,7 @@ def main():
                 
     except KeyboardInterrupt:
         # Correct Ctrl+C exit in terminal
-        print("\n[Инициализировано выключение системы. До встречи, сэр.]")
+        print("\n[System exit. Have a nice day, sir.]")
         sys.exit(0)
 
 if __name__ == "__main__":
